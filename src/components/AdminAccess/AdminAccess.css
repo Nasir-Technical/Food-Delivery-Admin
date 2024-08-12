@@ -1,0 +1,57 @@
+/* components/AdminAccess/AdminAccess.css */
+.admin-access {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+  }
+  .admin-access button{
+    text-align: center;
+    color: #333;
+  }
+  
+  .admin-access h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .admin-access form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-access input {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .admin-access button {
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .admin-access button:hover {
+    background-color: #0056b3;
+  }
+  
+  .admin-access .error {
+    color: red;
+    margin-top: 10px;
+  }
