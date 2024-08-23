@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './AdminAccess.css';
+import { BACKEND_URL } from '../../config'; // Adjust the import path if necessary
 
 const AdminAccess = ({ onLogin }) => {
   const [secretKey, setSecretKey] = useState('');
@@ -15,7 +16,7 @@ const AdminAccess = ({ onLogin }) => {
     }
 
     try {
-      const response = await fetch('http://localhost:4000/api/user/admin-access', {
+      const response = await fetch(`${BACKEND_URL}/api/user/admin-access`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
