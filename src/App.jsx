@@ -11,7 +11,7 @@ import AdminAccess from './components/AdminAccess/AdminAccess';
 
 const App = () => {
   const [token, setToken] = useState(null);
-  const url = "http://localhost:4000";
+  const url = "https://food-delivery-backend-kappa.vercel.app/";
   const navigate = useNavigate();
 
   useEffect(() => {
