@@ -1,18 +1,177 @@
-.sidebar{
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+button {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.box {
+    width: 140px;
+    height: auto;
+    float: left;
+    transition: .5s linear;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    margin: 0 5px;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.box:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid transparent;
+    box-sizing: border-box;
+    transform: translateX(100%);
+}
+
+.box:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+}
+
+.box:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover:before {
+    border-color: #262626;
+    height: 100%;
+    transform: translateX(0);
+    transition: .3s transform linear, .3s height linear .3s;
+}
+
+.box:hover:after {
+    border-color: #262626;
+    height: 100%;
+    transform: translateX(0);
+    transition: .3s transform linear, .3s height linear .5s;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #fcfcfc;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #a9a9a9;
+}
+
+.app-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/* navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 4%;
+    flex-wrap: wrap;
+}
+
+.navbar .logo {
+    width: max(10%, 80px);
+}
+
+.navbar .profile {
+    width: 40px;
+}
+
+/* sidebar.css */
+.sidebar {
     width: 18%;
     min-height: 100vh;
     border: 1.5px solid #a9a9a9;
     border-top: 0;
-    font-size: max(1vw,10px);
+    font-size: max(1vw, 10px);
 }
-.sidebar-options{
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 10px;
+        font-size: 14px;
+        border: none;
+        border-top: 1px solid #a9a9a9;
+        border-bottom: 1px solid #a9a9a9;
+    }
+    .sidebar-options {
+        flex-direction: row;
+        padding-left: 0;
+        padding-top: 0;
+        gap: 10px;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .sidebar-option {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+}
+
+.sidebar-options {
     padding-top: 50px;
     padding-left: 20%;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.sidebar-option{
+
+.sidebar-option {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -22,13 +181,8 @@
     border-radius: 3px 0px 0px 3px;
     cursor: pointer;
 }
-.sidebar-option.active{
+
+.sidebar-option.active {
     background-color: #fff0ed;
     border-color: tomato;
-}
-
-@media (max-widht:900px) {
-    .sidebar-option p{
-        display: none;
-    }
 }

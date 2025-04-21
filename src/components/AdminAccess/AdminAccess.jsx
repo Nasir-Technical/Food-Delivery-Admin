@@ -32,6 +32,9 @@ const AdminAccess = ({ onLogin }) => {
     } catch (err) {
       setError('Network error');
     }
+    // console.log("Received Key:", secretKey);
+    // console.log("Stored Key:", predefinedSecretKey);
+
   };
 
   return (
@@ -49,6 +52,7 @@ const AdminAccess = ({ onLogin }) => {
       </form>
     </div>
   );
+
 };
 
 export default AdminAccess;
