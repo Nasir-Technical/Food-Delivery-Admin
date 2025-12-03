@@ -11,7 +11,8 @@ import AdminAccess from './components/AdminAccess/AdminAccess';
 
 const App = () => {
   const [token, setToken] = useState(null);
-  const url = "https://food-del-ashen-ten.vercel.app";
+  // const url = "https://food-del-ashen-ten.vercel.app";
+  const url = "http://localhost:4000";
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -46,7 +47,13 @@ const App = () => {
             <Sidebar />
             <Routes>
               <Route path='/add' element={<Add url={url} />} />
+              <Route path='/add' element={<Add url={url} />} />
+              <Route path='/add' element={<Add url={url} />} />
               <Route path='/list' element={<List url={url} />} />
+              <Route path='/list' element={<List url={url} />} />
+              <Route path='/list' element={<List url={url} />} />
+              <Route path='/orders' element={<Orders url={url} />} />
+              <Route path='/orders' element={<Orders url={url} />} />
               <Route path='/orders' element={<Orders url={url} />} />
             </Routes>
           </div>
