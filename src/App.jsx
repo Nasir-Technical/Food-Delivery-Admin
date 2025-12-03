@@ -11,8 +11,8 @@ import AdminAccess from './components/AdminAccess/AdminAccess';
 
 const App = () => {
   const [token, setToken] = useState(null);
-  // const url = "https://food-del-ashen-ten.vercel.app";
-  const url = "http://localhost:4000";
+  const url = "https://food-delivery-backend-nu-seven.vercel.app";
+  // const url = "http://localhost:4000";
   const navigate = useNavigate();
 
   useEffect(() => {
